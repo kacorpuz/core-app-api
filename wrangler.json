@@ -4,11 +4,19 @@
 	"main": "./workers/app.ts",
 	"compatibility_date": "2025-10-08",
 	"compatibility_flags": ["nodejs_compat"],
+	"d1_databases": [
+		{
+		"binding": "CORE_APP_DB",
+		"database_name": "core-app-prod",
+		"database_id": "d0db74ea-83c7-4705-9b8a-081d36496821"
+		}
+  	],
 	"observability": {
 		"enabled": true
 	},
 	"upload_source_maps": true,
 	"vars": {
-		"VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare"
+		"VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare",
+		"UPSTREAM_API_URL": "https://jsonplaceholder.typicode.com/posts",
 	}
 }
