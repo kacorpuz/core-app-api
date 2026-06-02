@@ -1,6 +1,7 @@
 {
 	"name": "core-app-api",
 	"description": "Build a full-stack web application with React Router 7.",
+	"version": "0.1.5",
 	"cloudflare": {
 		"label": "React Router Framework Starter",
 		"products": [
