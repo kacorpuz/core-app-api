@@ -8,7 +8,7 @@
 		{
 		"binding": "CORE_APP_DB",
 		"database_name": "core-app-prod",
-		"database_id": "d0db74ea-83c7-4705-9b8a-081d36496821"
+		"database_id": "8d70d11e-1157-4a91-8f63-994cf9011a56"
 		}
   	],
 	"observability": {
