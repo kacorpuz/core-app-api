@@ -6,4 +6,5 @@ export default [
 	route("api/GetToken", "routes/api.data-api-generate-token.ts"),
 	
 	route("api/EPF/ValidateClient", "routes/api.epf-validate-contact.ts"),
+	route("api/EPF/GetDebtSummaryByClientID", "routes/api.epf-client-debt-summary.ts"),
 ] satisfies RouteConfig;

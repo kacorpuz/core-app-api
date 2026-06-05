@@ -16,6 +16,18 @@ export async function loader({ context, request }: Route.LoaderArgs) {
   }
 
 
+   // --- Auth: require a valid bearer token on the incoming request ---
+  const authHeader = request.headers.get("Authorization");
+  const incomingToken = authHeader?.startsWith("Bearer ")
+    ? authHeader.slice(7)
+    : null;
+
+  if (!incomingToken || incomingToken !== context.cloudflare.env.API_AUTH_TOKEN_EPF_VALIDATE_CLIENT) {
+    return Response.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  // -----------------------------------------------------------------
+
+
   if (!searchValue) {
     return Response.json({ error: "search_value is required" }, { status: 400 });
   }
